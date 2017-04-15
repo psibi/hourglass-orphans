@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -10,6 +11,10 @@ module Data.Hourglass.Types.Orphans
 import Data.Hourglass.Types
 import Data.Aeson
 import Data.Aeson.TH
+#if !MIN_VERSION_base(4,8,0)
+import Control.Applicative ((<$>), (<*>))
+import Data.Monoid (mempty)
+#endif
 
 deriveJSON defaultOptions ''Month
 

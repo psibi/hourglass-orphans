@@ -1,7 +1,7 @@
 name:                hourglass-orphans
 version:             0.1.0.0
--- synopsis:
--- description:
+synopsis:            Orphan Aeson instances to hourglass
+description:         Orphan Aeson instances to hourglass
 homepage:            https://github.com/psibi/hourglass-orphans#readme
 license:             BSD3
 license-file:        LICENSE
